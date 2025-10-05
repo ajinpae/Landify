@@ -4,6 +4,49 @@
     box-sizing: border-box;
 }
 body{
-    font-family: 'Inter', sans-serif;
-    color: #111827;
+    font-family: "Inter", sans-serif;
+    
+}
+.header {
+    display: flex;
+    align-items: center;
+    height: 80px; /* вместо 100vh */
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1216px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* расстояние между логотипом, меню и кнопками */
+    width: 100%;
+}
+
+.nav ul {
+    display: flex;
+    gap: 25px; /* расстояние между пунктами меню */
+    list-style: none;
+}
+
+.header__btn {
+    display: flex;
+    gap: 12px; /* расстояние между кнопками */
+}
+.header__btn button {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    color: black;
 }
