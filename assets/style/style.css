@@ -3,13 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    font-family: "Inter", sans-serif;   
+
+body {
+    font-family: "Inter", sans-serif;
 }
+
 .container {
     width: 100%;
 }
-.content{
+
+.content {
     max-width: 1260px;
     margin: 0 auto;
     padding: 0px 20px;
@@ -22,36 +25,48 @@ body{
     display: flex;
     background: url(../img/Background.png) no-repeat center/cover;
 }
+
 nav {
     display: grid;
-    grid-template-columns: 128px 2fr 1fr; /* три колонки: логотип, меню, кнопки */
-    align-items: center; /* выравнивание по вертикали */
-    gap: 40px; /* расстояние между логотипом, меню и кнопками */
+    grid-template-columns: 128px 2fr 1fr;
+    /* три колонки: логотип, меню, кнопки */
+    align-items: center;
+    /* выравнивание по вертикали */
+    gap: 40px;
+    /* расстояние между логотипом, меню и кнопками */
     width: 100%;
     padding: 20px 0;
 }
-.logo-link  {
+
+.logo-link {
     display: contents;
 }
+
 nav ul {
     display: flex;
-    gap: 8px; /* расстояние между пунктами меню */
+    gap: 8px;
+    /* расстояние между пунктами меню */
     list-style: none;
 }
+
 .header__btn {
     display: flex;
-    gap: 12px; /* расстояние между кнопками */
+    gap: 12px;
+    /* расстояние между кнопками */
 }
+
 .header__btn button {
     border: none;
     background: none;
     padding: 0;
     cursor: pointer;
 }
+
 a {
     text-decoration: none;
     color: black;
 }
+
 ul>li>a {
     text-decoration: none;
     font-weight: 600;
@@ -60,24 +75,33 @@ ul>li>a {
     color: #000000;
     padding: 8px 12px;
     border-radius: 8px;
-    transition: background-color 0.3s, color 0.3s; /* плавный переход для фона и цвета текста */
+    transition: background-color 0.3s, color 0.3s;
+    /* плавный переход для фона и цвета текста */
 }
+
 ul>li>a:hover {
-    background-color: #f0f0f0; /* светло-серый фон при наведении */
-    color: #f22bb2; /* цвет текста при наведении */
+    background-color: #f0f0f0;
+    /* светло-серый фон при наведении */
+    color: #f22bb2;
+    /* цвет текста при наведении */
 }
-.header__btn{
+
+.header__btn {
     display: flex;
-    gap: 12px; /* расстояние между кнопками */
+    gap: 12px;
+    /* расстояние между кнопками */
     justify-self: end;
 }
+
 .header__btn>a {
     display: contents;
     padding: 8px 16px;
     border-radius: 8px;
     border: 1px solid #000000;
-    transition: background-color 0.3s, color 0.3s; /* плавный переход для фона и цвета текста */
+    transition: background-color 0.3s, color 0.3s;
+    /* плавный переход для фона и цвета текста */
 }
+
 .header-hamburger-menu {
     display: none;
     flex-direction: column;
@@ -87,7 +111,8 @@ ul>li>a:hover {
     gap: 4px;
     cursor: pointer;
 }
-.header-hamburger-menu > span {
+
+.header-hamburger-menu>span {
     display: block;
     width: 61%;
     height: 2.4px;
@@ -96,35 +121,40 @@ ul>li>a:hover {
 
 /*----------------------------------MAIN----------------------------------*/
 
-.banner{    
+.banner {
     display: grid;
     grid-template-columns: 4fr 2fr;
     padding: 80px 0;
     gap: 96px;
     justify-content: center;
 }
+
 .banner-content {
     padding: 29px;
     margin-top: 67px;
 }
-.banner-content>h1{
+
+.banner-content>h1 {
     font-weight: 700;
     font-size: 61px;
     line-height: 86px;
     letter-spacing: -0.025em;
-   opacity: 85%;
+    opacity: 85%;
 }
-.banner-content>p { 
+
+.banner-content>p {
     font-size: 18px;
     line-height: 28px;
     opacity: 75%;
     margin-top: 13px;
 }
+
 .banner-buttons {
     margin-top: 32px;
     display: flex;
     gap: 16px;
 }
+
 .btn {
     display: inline-block;
     font-weight: 600;
@@ -134,52 +164,77 @@ ul>li>a:hover {
     border-radius: 8px;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s; /* плавный переход для фона и цвета текста */
+    transition: background-color 0.3s, color 0.3s;
+    /* плавный переход для фона и цвета текста */
 }
-.btn-first{
+
+.btn-first {
     background-color: #7C3AED;
-    color : #FFFFFF;
+    color: #FFFFFF;
 }
+
 .btn-first:hover {
     animation: pulse 0.6s;
     background-color: #5b23c4;
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.08); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
-.btn-second{
+
+.btn-second {
     background-color: transparent;
     color: #7C3AED;
     display: flex;
     align-items: center;
     gap: 8px;
 }
+
 .btn-second:hover {
     animation: moveRight 0.4s;
     background-color: rgba(124, 58, 237, 0.08);
 }
+
 @keyframes moveRight {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(8px); }
-    100% { transform: translateX(0); }
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(8px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
-.banner-image{
+
+.banner-image {
     max-width: 320px;
     max-height: 640px;
     position: relative;
     display: grid;
     justify-content: center;
 }
-.banner-image>img{
+
+.banner-image>img {
     width: 100%;
     height: auto;
     border-radius: 16px;
     z-index: 5;
 }
-.banner-image-background{
+
+.banner-image-background {
     position: absolute;
     left: 16px;
     height: 100%;
@@ -191,22 +246,41 @@ ul>li>a:hover {
     background-size: cover;
     background-position-x: center;
     background-position-y: 32px;
-    
+
     animation-name: GGWP;
     animation-duration: 54s;
     animation-timing-function: cubic-bezier(0.47, 0.07, 0.89, 0.78);
     animation-iteration-count: infinite;
-} 
-@keyframes GGWP {
-    0% {background-position-y: 32px;}
-    22% {background-position-y: -1100px;}
-    22% {background-position-y: -1000px;}
-    50% {background-position-y: -2500px;}
-    55% {background-position-y: -2300px;}
-    100% {background-position-y: 32px;}
 }
+
+@keyframes GGWP {
+    0% {
+        background-position-y: 32px;
+    }
+
+    22% {
+        background-position-y: -1100px;
+    }
+
+    22% {
+        background-position-y: -1000px;
+    }
+
+    50% {
+        background-position-y: -2500px;
+    }
+
+    55% {
+        background-position-y: -2300px;
+    }
+
+    100% {
+        background-position-y: 32px;
+    }
+}
+
 /*-- sc brands  --*/
-.brands{
+.brands {
     padding: 40px 30px;
     display: flex;
     justify-content: center;
@@ -229,7 +303,7 @@ h2 {
 }
 
 p {
-	margin-top: 8px;
+    margin-top: 8px;
     font-size: 18px;
     line-height: 28px;
 }
@@ -262,11 +336,14 @@ p {
     line-height: 24px;
     color: #374151;
 }
+
 /*----------------------------------sc stories----------------------------------*/
 .comments {
     background-color: #eefffe;
-     box-shadow: 0 0 32px 16px rgba(124, 58, 237, 0.12); /* мягкое фиолетовое размытие */
-    border-radius: 24px; /* для скругления */
+    box-shadow: 0 0 32px 16px rgba(124, 58, 237, 0.12);
+    /* мягкое фиолетовое размытие */
+    border-radius: 24px;
+    /* для скругления */
 }
 
 .quote-mark {
@@ -274,7 +351,7 @@ p {
     top: 64px;
 }
 
-.comments-list{
+.comments-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(9, 1fr);
@@ -348,14 +425,17 @@ p {
     font-weight: 400;
     color: #111827;
 }
-.achievements, .tools {
+
+.achievements,
+.tools {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-top: 80px;
     padding-bottom: 80px;
 }
 
-.achievements-text, .mobile-text {
+.achievements-text,
+.mobile-text {
     text-align: left;
     align-content: center;
 }
