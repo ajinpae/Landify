@@ -526,3 +526,39 @@ p {
     display: inline-block;
     margin-right: 12px;
 }
+/* ----------------- footer ----------------- */
+.footer {
+    background-color: black;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    color: #fff;
+}
+
+.footer-socials {
+    display: grid;
+    gap: 16px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-links {
+    margin-top: 24px;
+    display: flex;
+    text-decoration: none;
+    gap: 16px;
+
+}
+
+.footer-links>li>a {
+    color: #fff;
+}
+
+.copy {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 24px;
+}
