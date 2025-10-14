@@ -29,30 +29,27 @@ body {
 nav {
     display: grid;
     grid-template-columns: 128px 2fr 1fr;
-    /* три колонки: логотип, меню, кнопки */
     align-items: center;
-    /* выравнивание по вертикали */
     gap: 40px;
-    /* расстояние между логотипом, меню и кнопками */
     width: 100%;
     padding: 20px 0;
 }
 
 .logo-link {
-    display: contents;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 nav ul {
     display: flex;
     gap: 8px;
-    /* расстояние между пунктами меню */
     list-style: none;
 }
 
 .header__btn {
     display: flex;
-    gap: 12px;
-    /* расстояние между кнопками */
+    gap: 12px;/
 }
 
 .header__btn button {
@@ -76,20 +73,16 @@ ul>li>a {
     padding: 8px 12px;
     border-radius: 8px;
     transition: background-color 0.3s, color 0.3s;
-    /* плавный переход для фона и цвета текста */
 }
 
 ul>li>a:hover {
     background-color: #f0f0f0;
-    /* светло-серый фон при наведении */
     color: #f22bb2;
-    /* цвет текста при наведении */
 }
 
 .header__btn {
     display: flex;
     gap: 12px;
-    /* расстояние между кнопками */
     justify-self: end;
 }
 
@@ -99,7 +92,6 @@ ul>li>a:hover {
     border-radius: 8px;
     border: 1px solid #000000;
     transition: background-color 0.3s, color 0.3s;
-    /* плавный переход для фона и цвета текста */
 }
 
 .header-hamburger-menu {
@@ -165,7 +157,6 @@ ul>li>a:hover {
     border: none;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-    /* плавный переход для фона и цвета текста */
 }
 
 .btn-first {
@@ -217,6 +208,11 @@ ul>li>a:hover {
     100% {
         transform: translateX(0);
     }
+}
+.btn-first:hover {
+    background: linear-gradient(90deg, #7C3AED, #1DB5BE);
+    color: #fff;
+    box-shadow: 0 4px 24px #7C3AED55;
 }
 
 .banner-image {
@@ -300,6 +296,7 @@ ul>li>a:hover {
 h2 {
     font-size: 48px;
     line-height: 60px;
+    margin-bottom: 2px;
 }
 
 p {
@@ -429,12 +426,31 @@ p {
 
 .tools {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding-top: 80px;
+    grid-template-columns: 0.74fr 1fr;
+    column-gap: 95px;
+    padding-top: 100px;
     padding-bottom: 80px;
 }
 
-.achievements-text,
+/*--------------------------------------*/
+.content-achievements {
+    padding-top: 50px;
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+
+.content-achievements {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.achievements-text {
+    margin-top: 70px;
+    flex: 1 1 40%;
+}
+
 .mobile-text {
     text-align: left;
     align-content: center;
@@ -445,19 +461,23 @@ p {
     grid-template-columns: 1fr 1fr;
     column-gap: 32px;
     row-gap: 40px;
+    margin-top: 60px;
+
 }
 
 .achievement-item {
     display: flex;
-    gap: 16px;
+    gap: 6px;
 }
 
 .achievement-item>img {
-    width: 32px;
-    height: 32px;
+    width: 70px;
+    height: 70px;
+
 }
 
 /*--------------------------------------*/
+
 .tools-img {
     max-width: 697px;
     max-height: 270px;
@@ -472,21 +492,6 @@ p {
 .logo-glow img {
     position: relative;
     z-index: 2;
-}
-
-.logo-glow::before {
-    content: "";
-    position: absolute;
-    left: 250px;
-    top: -138px;
-    transform: translate(-50%, -50%);
-    width: 570px;
-    height: 456px;
-    border-radius: 75%;
-    background: radial-gradient(circle, #ece7fe 0%, #eae5fe 80%, transparent 100%);
-    box-shadow: 0 0 32px 8px #ece8fd;
-    z-index: 1;
-    opacity: 0.2;
 }
 
 .mobile {
@@ -526,6 +531,7 @@ p {
     display: inline-block;
     margin-right: 12px;
 }
+
 /* ----------------- footer ----------------- */
 .footer {
     background-color: black;
@@ -549,6 +555,9 @@ p {
     display: flex;
     text-decoration: none;
     gap: 16px;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
 
 }
 
@@ -561,4 +570,123 @@ p {
     font-weight: 400;
     line-height: 20px;
     margin-top: 24px;
+}
+
+.footer-info {
+    display: inline-grid;
+    column-gap: 20px;
+    row-gap: 20px;
+    opacity: 96%;
+}
+
+.footer-logo {
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #000;
+    padding: 32px 0;
+    justify-content: center;
+}
+
+.logo-img {
+    width: 34px;
+    height: 34px;
+    display: block;
+    transition: box-shadow 0.4s ease, transform 0.3s ease;
+    border-radius: 11px;
+}
+
+.logo-title {
+    color: #fff;
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.logo-tm {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: 8px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: stretch;
+    padding-top: 1px;
+    padding-bottom: 11px;
+    margin-left: -170px;
+}
+
+.logo-img:hover {
+    box-shadow:
+        0 0 30px 10px rgba(124, 58, 237, 0.5),
+        0 0 80px 40px rgba(124, 58, 237, 0.25);
+    transform: scale(1.32);
+
+}
+
+.achievement-item>img {
+    animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+.logo-glow::before {
+    animation: glowPulse 2s infinite alternate;
+}
+
+@keyframes glowPulse {
+    0% {
+        opacity: 0.5;
+        box-shadow: 0 0 32px 8px #7C3AED88;
+    }
+
+    100% {
+        opacity: 1;
+        box-shadow: 0 0 48px 16px #1DB5BE88;
+    }
+}
+
+.features-card>img {
+    animation: float-wave 4s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+    transition: filter 0.6s ease, transform 0.6s ease;
+}
+
+@keyframes float-wave {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+        filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.25));
+    }
+
+    25% {
+        transform: translateY(-10px) rotate(-2deg);
+        filter: drop-shadow(0 18px 25px rgba(0, 0, 0, 0.15));
+    }
+
+    50% {
+        transform: translateY(0px) rotate(2deg);
+        filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.25));
+    }
+
+    75% {
+        transform: translateY(8px) rotate(-1deg);
+        filter: drop-shadow(0 5px 12px rgba(0, 0, 0, 0.3));
+    }
+
+    100% {
+        transform: translateY(0px) rotate(0deg);
+        filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.25));
+    }
 }
