@@ -15,6 +15,7 @@
 
 <body>
     <!-- sc header  -->
+    <section id="home"> </section>
     <header class="container header">
         <div class="content">
             <nav>
@@ -30,18 +31,26 @@
                 </ul>
                 <div class="header__btn">
                     <a href="https://play.google.com/store/apps?hl=ru" target="_blank">
-                        <img src="assets/img/andr.svg" alt="icon-android">
+                        <img src="assets/img/andr.svg" class="mobile-hide" alt="icon-android">
                     </a>
                     <a href="https://apps.apple.com/ru/developer/apple/id284417353?mt=12" target="_blank">
-                        <img src="assets/img/ios.svg" alt="icon-ios">
+                        <img src="assets/img/ios.svg" class="mobile-hide" alt="icon-ios">
                     </a>
-                    <div class="header-hamburger-menu" id="mobile-menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
                 </div>
-
+                <!-- чекбокс и бургер -->
+                <input type="checkbox" id="menu-toggle" hidden>
+                <label for="menu-toggle" class="header-hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#careers">Careers</a></li>
+                    <li><a href="#help">Help</a></li>
+                </ul>
             </nav>
             <div class="banner">
                 <div class="banner-content">
@@ -87,6 +96,7 @@
         </div>
     </section>
     <!--sc tailor-->
+    <section id="features"> </section>
     <section class="container">
         <div class="content">
             <div class="features">
@@ -216,6 +226,7 @@
         </div>
     </section>
     <!-- easy-->
+    <section id="pricing"> </section>
     <section class="container">
         <div class="content tools">
             <div class="tools-text">
@@ -229,6 +240,7 @@
         </div>
     </section>
     <!-- СЕКЦИЯ Mobile -->
+    <section id="careers"></section>
     <section class="container mobile-section">
         <div class="content mobile">
             <div class="mobile-text">
@@ -252,13 +264,14 @@
         </div>
     </section>
     <!-- sc footer-->
+    <section id="help"></section>
     <footer class="container footer">
         <div class="content footer-content">
             <div class="footer-info">
                 <div class="footer-logo">
-                <img src="/assets/img/Logo11.svg" alt="Landify Logo" class="logo-img">
-                 <span class="logo-title">Landify</span>
-                <span class="logo-tm">™</span>
+                    <img src="/assets/img/Logo11.svg" alt="Landify Logo" class="logo-img">
+                    <span class="logo-title">Landify</span>
+                    <span class="logo-tm">™</span>
                 </div>
                 <ul class="footer-links">
                     <li><a href="">Download Now</a></li>
