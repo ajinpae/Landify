@@ -723,7 +723,7 @@ p {
 /*-----------------------------------pad----------------------------------*/
 /* ----------------- BURGER & SIDE MENU ----------------- */
 @media (max-width: 1200px) {
-    . nav {
+    .nav {
         /* display: flex; */
         /* gap: 77px; */
         align-content: stretch;
@@ -739,6 +739,7 @@ p {
         gap: 80px;
         justify-items: center;
         margin-right: 27px;
+        margin-top: -100px;
     }
 
     .header-hamburger-menu {
@@ -772,21 +773,22 @@ p {
 
     .nav-menu {
         position: fixed;
-        top: 86px;
+        /* top: 86px; */
         /* left: 173px; */
         right: -100%;
-        /* background: #fff; */
+        background: #fff;
         height: calc(12vh - 21px);
         width: 100%;
         display: flex;
         flex-direction: row;
         /* gap: 61px; */
-        padding: 40px 32px;
+        padding: 42px 81px;
         box-shadow: -7px -10 29px rgba(0, 0, 0, 0.1);
         transition: right 0.4s ease;
         z-index: 1000;
         justify-content: space-between;
     }
+
 
     /* показываем меню при checked */
     #menu-toggle:checked~.nav-menu {
@@ -864,7 +866,7 @@ p {
         justify-items: center;
     }
 
-    .h2 {
+    h2 {
         font-size: 30px;
         line-height: 40px;
     }
@@ -874,7 +876,7 @@ p {
 /* ----------------- MOBILE ----------------- */
 @media (max-width: 700px) {
     .mobile-hide {
-        max-width: 100px;
+        max-width: 120px;
     }
 
     .header-buttons>a {
@@ -882,7 +884,7 @@ p {
     }
 
     .banner-content>h1 {
-        font-size: 36px;
+        font-size: 38px;
         line-height: 45px;
     }
 
@@ -936,6 +938,7 @@ p {
 
     .content-achievements {
         display: flex;
+        align-items: center;
         flex-direction: column;
     }
 
@@ -943,6 +946,6 @@ p {
         padding: 40px 30px;
         display: flex;
         justify-content: center;
-
+        flex-wrap: wrap;
     }
 }
